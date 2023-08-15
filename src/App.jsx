@@ -1,3 +1,3 @@
 export const App = () => {
-  return <h1>DELA</h1>;
+  return <h1>VAMOS DELA</h1>;
 };
