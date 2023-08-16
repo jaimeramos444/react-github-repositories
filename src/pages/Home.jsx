@@ -12,6 +12,7 @@ export const Home = () => {
         );
         const data = await response.json();
         setRepository(data);
+        console.log(data);
       } catch (error) {
         console.error("error fetching repositories", error);
       }
