@@ -4,7 +4,6 @@ import { ContentRepository } from "../components/ContentRepository";
 const StyledWrapper = styled.div`
   padding: 20px 30px;
   padding-top: 100px;
-  width: 100%;
   position: relative;
   display: flex;
   gap: 20px;
