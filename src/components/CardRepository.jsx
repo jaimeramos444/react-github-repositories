@@ -56,6 +56,11 @@ export const CardRepository = ({ repo }) => {
     setIsFav(!isFav);
   };
 
+  const fecha1 = new Date(repo.pushed_at);
+  const fecha2 = new Date();
+  const difFech = fecha2.getTime() - fecha1.getTime();
+  const dateDifFech = Math.round(difFech / (1000 * 60 * 60 * 24));
+
   return (
     <StyledWrapper>
       <StyledContent>
@@ -65,7 +70,7 @@ export const CardRepository = ({ repo }) => {
         </StyledContentTittle>
         <StyledContentTittle>
           <p>🟡 {repo.language}</p>
-          <p>{repo.pushed_at}</p>
+          <p>Updated {dateDifFech} days ago</p>
         </StyledContentTittle>
       </StyledContent>
       <StyledButton onClick={handleFav}>
