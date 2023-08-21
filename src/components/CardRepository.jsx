@@ -60,6 +60,24 @@ export const CardRepository = ({ repo }) => {
   const fecha2 = new Date();
   const difFech = fecha2.getTime() - fecha1.getTime();
   const dateDifFech = Math.round(difFech / (1000 * 60 * 60 * 24));
+  let dateSentence = "Updated " + dateDifFech + " days ago";
+
+  function dateSentencefunc(dateDifFech) {
+    if (dateDifFech < 31) {
+      dateSentence = "Updated " + dateDifFech + " days ago";
+      return dateSentence;
+    } else if (dateDifFech < 365 && dateDifFech >= 31) {
+      let months = dateDifFech / 31;
+      let dateSentence = "Updated " + parseInt(months) + " months ago";
+      return dateSentence;
+    } else if (dateDifFech >= 365) {
+      let years = dateDifFech / 365;
+      let dateSentence = "Updated " + parseInt(years) + " years ago";
+      return dateSentence;
+    }
+  }
+
+  console.log(dateSentencefunc(dateDifFech));
 
   return (
     <StyledWrapper>
@@ -70,7 +88,7 @@ export const CardRepository = ({ repo }) => {
         </StyledContentTittle>
         <StyledContentTittle>
           <p>🟡 {repo.language}</p>
-          <p>Updated {dateDifFech} days ago</p>
+          <p>{dateSentencefunc(dateDifFech)}</p>
         </StyledContentTittle>
       </StyledContent>
       <StyledButton onClick={handleFav}>

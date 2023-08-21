@@ -12,6 +12,10 @@ const StyledSearch = styled.div`
   input {
     padding: 5px 12px;
     width: 80%;
+    border-radius: 6px;
+    box-shadow: inset;
+    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+    transition-property: color, background-color, box-shadow, border-color;
   }
 
   button {
@@ -48,7 +52,7 @@ export const ContentRepository = () => {
   return (
     <StyledWrapper>
       <StyledSearch>
-        <input />
+        <input placeholder="Find a repository..." />
         <button>Type</button>
         <button>Lenguage</button>
         <button>Sort</button>
