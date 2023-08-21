@@ -77,8 +77,6 @@ export const CardRepository = ({ repo }) => {
     }
   }
 
-  console.log(dateSentencefunc(dateDifFech));
-
   return (
     <StyledWrapper>
       <StyledContent>

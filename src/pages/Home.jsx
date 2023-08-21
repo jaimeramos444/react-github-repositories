@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ContentRepository } from "../components/ContentRepository";
+import { ProfileRepository } from "../components/ProfileRepository";
 
 const StyledWrapper = styled.div`
   padding: 20px 30px;
@@ -12,7 +13,7 @@ const StyledWrapper = styled.div`
 export const Home = () => {
   return (
     <StyledWrapper>
-      <div>Profile</div>
+      <ProfileRepository />
       <ContentRepository />
     </StyledWrapper>
   );
