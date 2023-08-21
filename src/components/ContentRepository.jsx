@@ -8,6 +8,15 @@ const StyledSearch = styled.div`
   flex-direction: row;
   gap: 10px;
   align-items: center;
+
+  input {
+    padding: 5px 12px;
+    width: 80%;
+  }
+
+  button {
+    padding: 5px 16px;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -40,6 +49,8 @@ export const ContentRepository = () => {
     <StyledWrapper>
       <StyledSearch>
         <input />
+        <button>Type</button>
+        <button>Lenguage</button>
         <button>Sort</button>
       </StyledSearch>
       {repository?.map((repo) => (

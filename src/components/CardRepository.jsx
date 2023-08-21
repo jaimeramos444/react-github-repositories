@@ -29,6 +29,10 @@ const StyledContentTittle = styled.div`
     color: #0969da;
     font-size: 20px;
   }
+  p {
+    color: white;
+    font-size: 12px;
+  }
 `;
 
 const StyledVisibility = styled.p`
