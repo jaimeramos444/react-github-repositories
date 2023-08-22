@@ -90,7 +90,7 @@ export const CardRepository = ({ repo }) => {
         </StyledContentTittle>
       </StyledContent>
       <StyledButton onClick={handleFav}>
-        <span>{isFav ? "⭐ " : "💫 "}</span>
+        <span>{isFav ? "🧡" : "🤍 "}</span>
         <span>{isFav ? " Starred" : " Star"}</span>
       </StyledButton>
     </StyledWrapper>

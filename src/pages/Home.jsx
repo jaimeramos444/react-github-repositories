@@ -8,6 +8,8 @@ const StyledWrapper = styled.div`
   position: relative;
   display: flex;
   gap: 20px;
+  min-width: 1012px;
+  margin: 0 10%;
 `;
 
 export const Home = () => {

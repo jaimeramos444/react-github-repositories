@@ -11,14 +11,25 @@ const StyledSearch = styled.div`
 
   input {
     padding: 5px 12px;
-    width: 80%;
+    width: 70%;
     border-radius: 6px;
     box-shadow: inset;
     transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
     transition-property: color, background-color, box-shadow, border-color;
   }
 
-  button {
+  select {
+    width: 10%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #30363d;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: white;
     padding: 5px 16px;
   }
 `;
@@ -53,9 +64,33 @@ export const ContentRepository = () => {
     <StyledWrapper>
       <StyledSearch>
         <input placeholder="Find a repository..." />
-        <button>Type</button>
-        <button>Lenguage</button>
-        <button>Sort</button>
+        <select name="Type">
+          <option value="Type" selected>
+            Type
+          </option>
+          <option value="All">All</option>
+          <option value="Sources">Sources</option>
+          <option value="Forks">Forks</option>
+          <option value="Archived">Archived</option>
+          <option value="sponsored">Can be sponsored</option>
+          <option value="Mirrors">Mirrors</option>
+          <option value="Templates">Templates</option>
+        </select>
+        <select name="Lenguage">
+          <option value="Lenguage" selected>
+            Lenguage
+          </option>
+          <option value="All">All</option>
+          <option value="JavaScript">JavaScript</option>
+        </select>
+        <select name="Sort">
+          <option value="Sort" selected>
+            Sort
+          </option>
+          <option value="updated">Last updated</option>
+          <option value="Name">Name</option>
+          <option value="Stars">Stars</option>
+        </select>
       </StyledSearch>
       {repository?.map((repo) => (
         <CardRepository key={repo.id} repo={repo} />
