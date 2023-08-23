@@ -4,7 +4,7 @@ import { ProfileRepository } from "../components/ProfileRepository";
 
 const StyledWrapper = styled.div`
   padding: 20px 30px;
-  padding-top: 100px;
+  padding-top: 30px;
   position: relative;
   display: flex;
   gap: 20px;

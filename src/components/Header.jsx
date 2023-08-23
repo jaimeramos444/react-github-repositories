@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  position: fixed;
+  position: static;
   display: flex;
   width: 100%;
   z-index: 1;

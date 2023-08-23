@@ -8,8 +8,8 @@ const StyledWrapper = styled.div`
   align-items: center;
   img {
     border-radius: 50%;
-    height: 260px;
-    width: 260px;
+    height: 296px;
+    width: 296px;
     box-shadow: 0 0 0 1px grey;
   }
 `;

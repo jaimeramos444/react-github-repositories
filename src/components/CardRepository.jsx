@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
@@ -30,7 +31,7 @@ const StyledContentTittle = styled.div`
     font-size: 20px;
   }
   p {
-    color: white;
+    color: #7d8590;
     font-size: 12px;
   }
 `;
@@ -40,6 +41,7 @@ const StyledVisibility = styled.p`
   border: 1px solid white;
   border-radius: 2em;
   font-size: 12px;
+  color: #7d8590;
 `;
 
 const StyledButton = styled.button`
@@ -81,7 +83,7 @@ export const CardRepository = ({ repo }) => {
     <StyledWrapper>
       <StyledContent>
         <StyledContentTittle>
-          <a>{repo.name}</a>
+          <Link to={`/repository/${repo.name}`}>{repo.name}</Link>
           <StyledVisibility>{repo.visibility}</StyledVisibility>
         </StyledContentTittle>
         <StyledContentTittle>
@@ -90,7 +92,7 @@ export const CardRepository = ({ repo }) => {
         </StyledContentTittle>
       </StyledContent>
       <StyledButton onClick={handleFav}>
-        <span>{isFav ? "🧡" : "🤍 "}</span>
+        <span>{isFav ? "🧡 " : "🤍 "}</span>
         <span>{isFav ? " Starred" : " Star"}</span>
       </StyledButton>
     </StyledWrapper>
